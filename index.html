@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Fibonacci</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+        <script src="app.js"></script>
+            
+    </head>
+    <body ng-app="Fib", ng-controller='mainCtrl'>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                
+        
+                <div class="page-header">
+                    <h1>Fibonacci Numbers</h1>
+                </div>
+                
+                <form ng-submit="getFib()" style = "margin-top30px;">
+                <input type="text" ng-model="formContent"></input>
+                <button type="submit">Submit</button>
+                </form>
+            
+                <li ng-repeat="s in sequence track by $index"> {{s}} </li>
+            
+            </div>
+        </div>
+    </body>
+</html>
